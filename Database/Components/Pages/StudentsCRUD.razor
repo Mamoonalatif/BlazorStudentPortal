@@ -1,0 +1,106 @@
+﻿@page "/"
+@using Database.Data
+@inject StudentService StudentService
+@rendermode InteractiveServer
+
+<div class="students-page">
+    <div class="form-left">
+        <h3 class="glowing-text">Student Registrations</h3>
+        <EditForm Model="newStudent" OnValidSubmit="SaveStudent" FormName="StudentForm">
+            <InputText class="form-input" @bind-Value="newStudent.Name" placeholder="Name" />
+            <InputNumber class="form-input" @bind-Value="newStudent.Age" />
+            <InputText class="form-input" @bind-Value="newStudent.Email" placeholder="Email" />
+            <button class="btn-animated" type="submit">Save</button>
+        </EditForm>
+    </div>
+
+    <div class="form-right">
+        <div class="glow-circle">
+            <img src="/images/student.png" alt="Student Pic" />
+        </div>
+    </div>
+</div>
+
+<hr />
+
+@if (students == null)
+{
+    <p class="glowing-text"><em>Loading...</em></p>
+}
+else
+{
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in students)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.Email</td>
+                    <td>
+                        <button class="btn-animated" @onclick="() => EditStudent(student.Id)">Edit</button>
+                        <button class="btn-animated" @onclick="() => DeleteStudent(student.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+@code {
+    List<Student> students;
+    Student newStudent = new Student();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadStudents();
+    }
+
+    async Task LoadStudents()
+    {
+        students = await StudentService.GetStudentsAsync();
+    }
+
+    async Task SaveStudent()
+    {
+        if (newStudent.Id == 0)
+        {
+            await StudentService.AddStudentAsync(newStudent);
+        }
+        else
+        {
+            await StudentService.UpdateStudentAsync(newStudent);
+        }
+
+        newStudent = new Student(); // Resets the form for a new student
+        await LoadStudents();
+    }
+
+    async Task EditStudent(int id)
+    {
+        var s = await StudentService.GetStudentByIdAsync(id);
+        newStudent = new Student
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Age = s.Age,
+                Email = s.Email
+            };
+    }
+
+    async Task DeleteStudent(int id)
+    {
+        await StudentService.DeleteStudentAsync(id);
+        await LoadStudents();
+    }
+}
