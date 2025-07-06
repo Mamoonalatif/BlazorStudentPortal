@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/b1fc332d-7f17-4bb6-adb9-cb537009a7fd)# 🎓 Blazor Student Portal
+# 🎓 Blazor Student Portal
 
 A modern, interactive web application built with **Blazor Server** for managing student records with full CRUD (Create, Read, Update, Delete) operations and SQL Server database integration.
 
@@ -9,7 +9,7 @@ A modern, interactive web application built with **Blazor Server** for managing 
 ![image](https://github.com/user-attachments/assets/59d3d7af-a948-40f8-a158-002dcfbdb2b4)
 ![image](https://github.com/user-attachments/assets/bceb8e72-8bc4-427c-bb18-853c24efc627)
 ![image](https://github.com/user-attachments/assets/c3365ca8-3144-431e-9690-9c342f283cfc)
-
+![image](https://github.com/user-attachments/assets/b1fc332d-7f17-4bb6-adb9-cb537009a7fd)
 ## 🚀 Features
 
 ### ✨ Core Functionality
