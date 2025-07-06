@@ -1,11 +1,14 @@
-# 🎓 Blazor Student Portal
+![image](https://github.com/user-attachments/assets/b1fc332d-7f17-4bb6-adb9-cb537009a7fd)# 🎓 Blazor Student Portal
 
 A modern, interactive web application built with **Blazor Server** for managing student records with full CRUD (Create, Read, Update, Delete) operations and SQL Server database integration.
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-blue)
 ![Blazor](https://img.shields.io/badge/Blazor-Server-purple)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-Database-red)
-![License](https://img.shields.io/badge/License-MIT-green)
+
+![image](https://github.com/user-attachments/assets/59d3d7af-a948-40f8-a158-002dcfbdb2b4)
+![image](https://github.com/user-attachments/assets/bceb8e72-8bc4-427c-bb18-853c24efc627)
+![image](https://github.com/user-attachments/assets/c3365ca8-3144-431e-9690-9c342f283cfc)
 
 ## 🚀 Features
 
@@ -233,28 +236,14 @@ builder.Services.AddScoped<StudentService>();
 4. **📤 Push** to the branch (`git push origin feature/AmazingFeature`)
 5. **🔄 Open** a Pull Request
 
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Mamoona Latif**
 - 🐙 GitHub: [@Mamoonalatif](https://github.com/Mamoonalatif)
-- 📧 Email: [Your Email]
-- 💼 LinkedIn: [Your LinkedIn Profile]
-
-## 🙏 Acknowledgments
-
-- **Microsoft** for the amazing Blazor framework
-- **Bootstrap** team for the responsive CSS framework
-- **SQL Server** team for the robust database engine
-- **Open Source Community** for continuous inspiration
-
----
+- 💼 LinkedIn: [https://www.linkedin.com/in/mamoonaa/]
 
 ⭐ **Star this repository** if you found it helpful!
 
 🐛 **Found a bug?** Please open an issue!
 
-💡 **Have a suggestion?** We'd love to hear from you!
+💡 **Have a suggestion?** I'd love to hear from you!
